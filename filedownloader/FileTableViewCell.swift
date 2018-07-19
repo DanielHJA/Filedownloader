@@ -119,6 +119,7 @@ extension FileTableViewCell: DownloadSessionDelegate {
             print("Downloading")
         case .completed:
             print("Download completed")
+            loadingBar.progress = 1.0
             downloadButton.removeFromSuperview()
             // Remove cell
         case .error:

@@ -29,10 +29,9 @@ class ViewController: UIViewController {
     
     private var files: [FileObject] = {
         return [
-        FileObject(displayName: "50 MB file",
-                   filename: "50mb",
-                   url: "http://ipv4.download.thinkbroadband.com:8080/50MB.zip"),
-
+        FileObject(displayName: "20 MB file",
+                   filename: "20mb",
+                   url: "http://ipv4.download.thinkbroadband.com:8080/10MB.zip"),
         FileObject(displayName: "Allrighty then!",
                    filename: "allrightythen",
                    url: "https://www.thesoundarchive.com/play-wav-files.asp?sound=ace/one/aallrighty.mp3"),

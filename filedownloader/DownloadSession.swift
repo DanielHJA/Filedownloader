@@ -41,10 +41,15 @@ class DownloadSession: NSObject {
     }
     
     func setupWithUrl(_ url: URL) {
-        let configuration = URLSessionConfiguration.default//background(withIdentifier: "com.downloader.background")
-        let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+        let configuration = URLSessionConfiguration.background(withIdentifier: "\(url.absoluteString).background")
+        configuration.sessionSendsLaunchEvents = true // Wakes up app when download completes
+        //configuration.isDiscretionary = false // Set to true to wait for optimal conditions (wifi etc.)
+        let session = URLSession(configuration: configuration, delegate: self, delegateQueue: OperationQueue.main)
         let request = URLRequest(url: url)
         task = session.downloadTask(with: request)
+        // task?.earliestBeginDate = Date().addingTimerInterval(60 * 60) // Set to schedule download at least 1 hour ->
+        // task?.countOfBytesClientExpectsToReceive = 200 // Set approximate bytes to be recieved
+        // task?.countOfBytesClientExpectsToSend = 200 // Set approximate bytes to be sent
     }
     
     func startDownload() {
@@ -91,6 +96,16 @@ extension DownloadSession: URLSessionTaskDelegate, URLSessionDownloadDelegate {
                 self.delegate?.downloadDidComplete()
                 self.delegate?.downloadState(.completed)
             }
+        }
+    }
+    
+    func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+        print("calling completionHandler")
+        let sessionIdentifier = session.configuration.identifier
+        if let sessionID = sessionIdentifier, let app = UIApplication.shared.delegate as? AppDelegate, let handler = app.backgroundCompletionHandlers.removeValue(forKey: sessionID) {
+            handler()
+            self.delegate?.downloadDidComplete()
+            self.delegate?.downloadState(.completed)
         }
     }
     

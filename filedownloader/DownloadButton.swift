@@ -58,6 +58,7 @@ class DownloadButton: UIButton {
     private func commonInit() {
         layer.addSublayer(shapeLayer)
         layer.addSublayer(squareLayer)
+        NotificationCenter.default.addObserver(self, selector: #selector(startAnimation), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
     private func switchButtonState() {
@@ -79,7 +80,7 @@ class DownloadButton: UIButton {
         }
     }
     
-    private func startAnimation() {
+    @objc private func startAnimation() {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.duration = 5.0
         rotationAnimation.toValue = Double.pi * 2
@@ -93,6 +94,7 @@ class DownloadButton: UIButton {
     
     deinit {
         print("Downloadbutton wwas de-initialized")
+        NotificationCenter.default.removeObserver(self)
     }
     
 }
