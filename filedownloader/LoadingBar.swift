@@ -30,7 +30,8 @@ class LoadingBar: UIView {
     
     var finished: Bool = false {
         didSet {
-            loadingLayer.strokeEnd = progress
+
+            loadingLayer.strokeEnd = 1.0
             animateBarToColor(UIColor.green)
         }
     }

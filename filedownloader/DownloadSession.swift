@@ -17,7 +17,6 @@ protocol DownloadQueueDelegate: class {
 }
 
 protocol DownloadSessionDelegate: class {
-    func downloadDidComplete()
     func downloadProgress(_ progress: CGFloat)
     func downloadState(_ state: DownloadState)
 }
@@ -93,7 +92,6 @@ extension DownloadSession: URLSessionTaskDelegate, URLSessionDownloadDelegate {
         DispatchQueue.global().async(qos: .background) {
             self.queueDelegate?.downloadDidComplete()
             DispatchQueue.main.async {
-                self.delegate?.downloadDidComplete()
                 self.delegate?.downloadState(.completed)
             }
         }
@@ -104,7 +102,6 @@ extension DownloadSession: URLSessionTaskDelegate, URLSessionDownloadDelegate {
         let sessionIdentifier = session.configuration.identifier
         if let sessionID = sessionIdentifier, let app = UIApplication.shared.delegate as? AppDelegate, let handler = app.backgroundCompletionHandlers.removeValue(forKey: sessionID) {
             handler()
-            self.delegate?.downloadDidComplete()
             self.delegate?.downloadState(.completed)
         }
     }

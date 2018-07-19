@@ -99,10 +99,6 @@ class FileTableViewCell: UITableViewCell {
 
 extension FileTableViewCell: DownloadSessionDelegate {
    
-    func downloadDidComplete() {
-        loadingBar.finished = true
-    }
-    
     func downloadProgress(_ progress: CGFloat) {
         loadingBar.progress = progress
     }
@@ -119,7 +115,7 @@ extension FileTableViewCell: DownloadSessionDelegate {
             print("Downloading")
         case .completed:
             print("Download completed")
-            loadingBar.progress = 1.0
+            loadingBar.finished = true
             downloadButton.removeFromSuperview()
             // Remove cell
         case .error:
