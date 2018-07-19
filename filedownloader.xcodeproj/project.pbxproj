@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B1614122100EECF007398F5 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1614112100EECF007398F5 /* CustomNavigationController.swift */; };
+		7B16BE1920FFAEC600D371C0 /* LoadingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16BE1820FFAEC600D371C0 /* LoadingBar.swift */; };
+		7B16BE1B20FFB8A000D371C0 /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16BE1A20FFB8A000D371C0 /* DownloadButton.swift */; };
+		7B5C454C20FEB42C0011DD9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C454B20FEB42C0011DD9D /* AppDelegate.swift */; };
+		7B5C454E20FEB42C0011DD9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C454D20FEB42C0011DD9D /* ViewController.swift */; };
+		7B5C455120FEB42C0011DD9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C454F20FEB42C0011DD9D /* Main.storyboard */; };
+		7B5C455320FEB42C0011DD9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C455220FEB42C0011DD9D /* Assets.xcassets */; };
+		7B5C455620FEB42C0011DD9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C455420FEB42C0011DD9D /* LaunchScreen.storyboard */; };
+		7B5C456120FEB42C0011DD9D /* filedownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C456020FEB42C0011DD9D /* filedownloaderTests.swift */; };
+		7B5C456C20FEB42C0011DD9D /* filedownloaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C456B20FEB42C0011DD9D /* filedownloaderUITests.swift */; };
+		7B5C457A20FEB4580011DD9D /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C457920FEB4580011DD9D /* FileTableViewCell.swift */; };
+		7B5C457C20FEB4A10011DD9D /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C457B20FEB4A10011DD9D /* DownloadManager.swift */; };
+		7B5C457E20FEB4EB0011DD9D /* FileObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C457D20FEB4EB0011DD9D /* FileObject.swift */; };
+		7B5C458020FEBDF90011DD9D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C457F20FEBDF90011DD9D /* Extensions.swift */; };
+		7B5C458220FEC3D20011DD9D /* DownloadSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C458120FEC3D20011DD9D /* DownloadSession.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B5C455D20FEB42C0011DD9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5C454020FEB42B0011DD9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5C454720FEB42C0011DD9D;
+			remoteInfo = filedownloader;
+		};
+		7B5C456820FEB42C0011DD9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5C454020FEB42B0011DD9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5C454720FEB42C0011DD9D;
+			remoteInfo = filedownloader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B1614112100EECF007398F5 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		7B16BE1820FFAEC600D371C0 /* LoadingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBar.swift; sourceTree = "<group>"; };
+		7B16BE1A20FFB8A000D371C0 /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
+		7B5C454820FEB42C0011DD9D /* filedownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = filedownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5C454B20FEB42C0011DD9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B5C454D20FEB42C0011DD9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B5C455020FEB42C0011DD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B5C455220FEB42C0011DD9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B5C455520FEB42C0011DD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7B5C455720FEB42C0011DD9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B5C455C20FEB42C0011DD9D /* filedownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = filedownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5C456020FEB42C0011DD9D /* filedownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filedownloaderTests.swift; sourceTree = "<group>"; };
+		7B5C456220FEB42C0011DD9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B5C456720FEB42C0011DD9D /* filedownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = filedownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5C456B20FEB42C0011DD9D /* filedownloaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filedownloaderUITests.swift; sourceTree = "<group>"; };
+		7B5C456D20FEB42C0011DD9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B5C457920FEB4580011DD9D /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		7B5C457B20FEB4A10011DD9D /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		7B5C457D20FEB4EB0011DD9D /* FileObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileObject.swift; sourceTree = "<group>"; };
+		7B5C457F20FEBDF90011DD9D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7B5C458120FEC3D20011DD9D /* DownloadSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSession.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B5C454520FEB42C0011DD9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5C455920FEB42C0011DD9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5C456420FEB42C0011DD9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B5C453F20FEB42B0011DD9D = {
+			isa = PBXGroup;
+			children = (
+				7B5C454A20FEB42C0011DD9D /* filedownloader */,
+				7B5C455F20FEB42C0011DD9D /* filedownloaderTests */,
+				7B5C456A20FEB42C0011DD9D /* filedownloaderUITests */,
+				7B5C454920FEB42C0011DD9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B5C454920FEB42C0011DD9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C454820FEB42C0011DD9D /* filedownloader.app */,
+				7B5C455C20FEB42C0011DD9D /* filedownloaderTests.xctest */,
+				7B5C456720FEB42C0011DD9D /* filedownloaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B5C454A20FEB42C0011DD9D /* filedownloader */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C454B20FEB42C0011DD9D /* AppDelegate.swift */,
+				7B5C454D20FEB42C0011DD9D /* ViewController.swift */,
+				7B5C457D20FEB4EB0011DD9D /* FileObject.swift */,
+				7B5C457920FEB4580011DD9D /* FileTableViewCell.swift */,
+				7B1614112100EECF007398F5 /* CustomNavigationController.swift */,
+				7B16BE1A20FFB8A000D371C0 /* DownloadButton.swift */,
+				7B16BE1820FFAEC600D371C0 /* LoadingBar.swift */,
+				7B5C457F20FEBDF90011DD9D /* Extensions.swift */,
+				7B5C457B20FEB4A10011DD9D /* DownloadManager.swift */,
+				7B5C458120FEC3D20011DD9D /* DownloadSession.swift */,
+				7B5C454F20FEB42C0011DD9D /* Main.storyboard */,
+				7B5C455220FEB42C0011DD9D /* Assets.xcassets */,
+				7B5C455420FEB42C0011DD9D /* LaunchScreen.storyboard */,
+				7B5C455720FEB42C0011DD9D /* Info.plist */,
+			);
+			path = filedownloader;
+			sourceTree = "<group>";
+		};
+		7B5C455F20FEB42C0011DD9D /* filedownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C456020FEB42C0011DD9D /* filedownloaderTests.swift */,
+				7B5C456220FEB42C0011DD9D /* Info.plist */,
+			);
+			path = filedownloaderTests;
+			sourceTree = "<group>";
+		};
+		7B5C456A20FEB42C0011DD9D /* filedownloaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C456B20FEB42C0011DD9D /* filedownloaderUITests.swift */,
+				7B5C456D20FEB42C0011DD9D /* Info.plist */,
+			);
+			path = filedownloaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B5C454720FEB42C0011DD9D /* filedownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5C457020FEB42C0011DD9D /* Build configuration list for PBXNativeTarget "filedownloader" */;
+			buildPhases = (
+				7B5C454420FEB42C0011DD9D /* Sources */,
+				7B5C454520FEB42C0011DD9D /* Frameworks */,
+				7B5C454620FEB42C0011DD9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = filedownloader;
+			productName = filedownloader;
+			productReference = 7B5C454820FEB42C0011DD9D /* filedownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B5C455B20FEB42C0011DD9D /* filedownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5C457320FEB42C0011DD9D /* Build configuration list for PBXNativeTarget "filedownloaderTests" */;
+			buildPhases = (
+				7B5C455820FEB42C0011DD9D /* Sources */,
+				7B5C455920FEB42C0011DD9D /* Frameworks */,
+				7B5C455A20FEB42C0011DD9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B5C455E20FEB42C0011DD9D /* PBXTargetDependency */,
+			);
+			name = filedownloaderTests;
+			productName = filedownloaderTests;
+			productReference = 7B5C455C20FEB42C0011DD9D /* filedownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7B5C456620FEB42C0011DD9D /* filedownloaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5C457620FEB42C0011DD9D /* Build configuration list for PBXNativeTarget "filedownloaderUITests" */;
+			buildPhases = (
+				7B5C456320FEB42C0011DD9D /* Sources */,
+				7B5C456420FEB42C0011DD9D /* Frameworks */,
+				7B5C456520FEB42C0011DD9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B5C456920FEB42C0011DD9D /* PBXTargetDependency */,
+			);
+			name = filedownloaderUITests;
+			productName = filedownloaderUITests;
+			productReference = 7B5C456720FEB42C0011DD9D /* filedownloaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B5C454020FEB42B0011DD9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Daniel Hjärtström";
+				TargetAttributes = {
+					7B5C454720FEB42C0011DD9D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7B5C455B20FEB42C0011DD9D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7B5C454720FEB42C0011DD9D;
+					};
+					7B5C456620FEB42C0011DD9D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7B5C454720FEB42C0011DD9D;
+					};
+				};
+			};
+			buildConfigurationList = 7B5C454320FEB42C0011DD9D /* Build configuration list for PBXProject "filedownloader" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B5C453F20FEB42B0011DD9D;
+			productRefGroup = 7B5C454920FEB42C0011DD9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B5C454720FEB42C0011DD9D /* filedownloader */,
+				7B5C455B20FEB42C0011DD9D /* filedownloaderTests */,
+				7B5C456620FEB42C0011DD9D /* filedownloaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B5C454620FEB42C0011DD9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5C455620FEB42C0011DD9D /* LaunchScreen.storyboard in Resources */,
+				7B5C455320FEB42C0011DD9D /* Assets.xcassets in Resources */,
+				7B5C455120FEB42C0011DD9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5C455A20FEB42C0011DD9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5C456520FEB42C0011DD9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B5C454420FEB42C0011DD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5C454E20FEB42C0011DD9D /* ViewController.swift in Sources */,
+				7B5C458220FEC3D20011DD9D /* DownloadSession.swift in Sources */,
+				7B5C458020FEBDF90011DD9D /* Extensions.swift in Sources */,
+				7B5C457A20FEB4580011DD9D /* FileTableViewCell.swift in Sources */,
+				7B5C454C20FEB42C0011DD9D /* AppDelegate.swift in Sources */,
+				7B5C457C20FEB4A10011DD9D /* DownloadManager.swift in Sources */,
+				7B1614122100EECF007398F5 /* CustomNavigationController.swift in Sources */,
+				7B16BE1920FFAEC600D371C0 /* LoadingBar.swift in Sources */,
+				7B16BE1B20FFB8A000D371C0 /* DownloadButton.swift in Sources */,
+				7B5C457E20FEB4EB0011DD9D /* FileObject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5C455820FEB42C0011DD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5C456120FEB42C0011DD9D /* filedownloaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5C456320FEB42C0011DD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5C456C20FEB42C0011DD9D /* filedownloaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B5C455E20FEB42C0011DD9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5C454720FEB42C0011DD9D /* filedownloader */;
+			targetProxy = 7B5C455D20FEB42C0011DD9D /* PBXContainerItemProxy */;
+		};
+		7B5C456920FEB42C0011DD9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5C454720FEB42C0011DD9D /* filedownloader */;
+			targetProxy = 7B5C456820FEB42C0011DD9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B5C454F20FEB42C0011DD9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B5C455020FEB42C0011DD9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7B5C455420FEB42C0011DD9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B5C455520FEB42C0011DD9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B5C456E20FEB42C0011DD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7B5C456F20FEB42C0011DD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B5C457120FEB42C0011DD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZL797GF7H;
+				INFOPLIST_FILE = filedownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielhjartstrom.filedownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B5C457220FEB42C0011DD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZL797GF7H;
+				INFOPLIST_FILE = filedownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielhjartstrom.filedownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7B5C457420FEB42C0011DD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZL797GF7H;
+				INFOPLIST_FILE = filedownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielhjartstrom.filedownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/filedownloader.app/filedownloader";
+			};
+			name = Debug;
+		};
+		7B5C457520FEB42C0011DD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZL797GF7H;
+				INFOPLIST_FILE = filedownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielhjartstrom.filedownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/filedownloader.app/filedownloader";
+			};
+			name = Release;
+		};
+		7B5C457720FEB42C0011DD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZL797GF7H;
+				INFOPLIST_FILE = filedownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielhjartstrom.filedownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = filedownloader;
+			};
+			name = Debug;
+		};
+		7B5C457820FEB42C0011DD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZL797GF7H;
+				INFOPLIST_FILE = filedownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielhjartstrom.filedownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = filedownloader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B5C454320FEB42C0011DD9D /* Build configuration list for PBXProject "filedownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5C456E20FEB42C0011DD9D /* Debug */,
+				7B5C456F20FEB42C0011DD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5C457020FEB42C0011DD9D /* Build configuration list for PBXNativeTarget "filedownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5C457120FEB42C0011DD9D /* Debug */,
+				7B5C457220FEB42C0011DD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5C457320FEB42C0011DD9D /* Build configuration list for PBXNativeTarget "filedownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5C457420FEB42C0011DD9D /* Debug */,
+				7B5C457520FEB42C0011DD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B5C457620FEB42C0011DD9D /* Build configuration list for PBXNativeTarget "filedownloaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5C457720FEB42C0011DD9D /* Debug */,
+				7B5C457820FEB42C0011DD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B5C454020FEB42B0011DD9D /* Project object */;
+}
