@@ -18,7 +18,7 @@ struct FileObject {
     init(displayName: String, filename: String, url: String) {
         self.displayName = displayName
         self.url = URL(string: url)
-        self.fileExtension = filename.fileExtension()
-        self.filename = "\(filename).\(fileExtension)"
+        self.fileExtension = url.fileExtension()
+        self.filename = filename
     }
 }

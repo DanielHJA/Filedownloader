@@ -11,6 +11,7 @@ import UIKit
 class FileTableViewCell: UITableViewCell {
 
     var url: URL?
+    private var object: FileObject!
     
     private lazy var loadingBar: LoadingBar = {
         let temp = LoadingBar(frame: CGRect(x: 0, y: 0, width: frame.width, height: 3.0))
@@ -77,6 +78,7 @@ class FileTableViewCell: UITableViewCell {
     }
     
     func setupWithFileObject(_ object: FileObject) {
+        self.object = object
         selectionStyle = .none
         startDownloadButton.isHidden = false
         loadingBar.isHidden = false
@@ -92,7 +94,7 @@ class FileTableViewCell: UITableViewCell {
     
     @objc private func didPressDownload(_ sender: UIButton) {
         guard let url = url, url.canBeOpened() else { return } // Make UI change
-        let session = DownloadManager.sessionWithURL(url, delegate: self)
+        let session = DownloadManager.sessionWithURL(delegate: self, object: object)
         DownloadManager.shared.startFileDownloadWithSession(session)
     }
 }
@@ -118,8 +120,8 @@ extension FileTableViewCell: DownloadSessionDelegate {
             loadingBar.finished = true
             downloadButton.removeFromSuperview()
             // Remove cell
-        case .error:
-            print("There was an error with the download")
+        case .error(let error):
+            print("There was an error with the download -- \(error.localizedDescription)")
             resetCell()
         case .cancelled:
             print("The user has stopped the download")

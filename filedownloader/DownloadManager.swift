@@ -33,9 +33,9 @@ class DownloadManager {
         }
     }
     
-    class func sessionWithURL(_ url: URL, delegate: DownloadSessionDelegate) -> DownloadSession {
+    class func sessionWithURL(delegate: DownloadSessionDelegate, object: FileObject) -> DownloadSession {
         let session = DownloadSession()
-        session.setupWithUrl(url)
+        session.setupWithObject(object)
         session.delegate = delegate
         return session
     }

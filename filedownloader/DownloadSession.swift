@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum DownloadState {
-    case pending, downloading, completed, error(Error), cancelled
-}
-
 protocol DownloadQueueDelegate: class {
     func downloadDidComplete()
 }
@@ -27,10 +23,10 @@ class DownloadSession: NSObject {
     weak var queueDelegate: DownloadQueueDelegate?
 
     private var task: URLSessionDownloadTask?
+    private var object: FileObject!
+    private var userCancelledDownload: Bool = false
 
     var isDownloading: Bool = false
-    var userCancelledDownload: Bool = false
-    
     var prepare: Bool = false {
         didSet {
             DispatchQueue.main.async {
@@ -39,7 +35,13 @@ class DownloadSession: NSObject {
         }
     }
     
-    func setupWithUrl(_ url: URL) {
+    func setupWithObject(_ object: FileObject) {
+        self.object = object
+        guard let url = object.url else {
+            delegate?.downloadState(.error(.invalidURL))
+            return
+        }
+        
         let configuration = URLSessionConfiguration.background(withIdentifier: "\(url.absoluteString).background")
         configuration.sessionSendsLaunchEvents = true // Wakes up app when download completes
         //configuration.isDiscretionary = false // Set to true to wait for optimal conditions (wifi etc.)
@@ -88,11 +90,12 @@ extension DownloadSession: URLSessionTaskDelegate, URLSessionDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        // Add filestuff
-        DispatchQueue.global().async(qos: .background) {
-            self.queueDelegate?.downloadDidComplete()
-            DispatchQueue.main.async {
-                self.delegate?.downloadState(.completed)
+        FileHandler.saveFileFrom(tempLocation: location, fileName: object.filename, pathExtension: object.fileExtension) {
+            DispatchQueue.global().async(qos: .background) {
+                self.queueDelegate?.downloadDidComplete()
+                DispatchQueue.main.async {
+                    self.delegate?.downloadState(.completed)
+                }
             }
         }
     }
@@ -110,7 +113,7 @@ extension DownloadSession: URLSessionTaskDelegate, URLSessionDownloadDelegate {
         guard let error = error else { return }
         if !userCancelledDownload {
             DispatchQueue.main.async {
-                self.delegate?.downloadState(.error(error))
+                self.delegate?.downloadState(.error(.systemError(error)))
             }
         }
     }
