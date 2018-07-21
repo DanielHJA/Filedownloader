@@ -90,7 +90,7 @@ extension DownloadSession: URLSessionTaskDelegate, URLSessionDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        FileHandler.saveFileFrom(tempLocation: location, fileName: object.filename, pathExtension: object.fileExtension) {
+        FileHandler.saveFileFrom(tempLocation: location, fileName: object.filename, pathExtension: object.fileExtension, mediatype: object.mediatype) {
             DispatchQueue.global().async(qos: .background) {
                 self.queueDelegate?.downloadDidComplete()
                 DispatchQueue.main.async {

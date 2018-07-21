@@ -14,11 +14,13 @@ struct FileObject {
     var filename: String
     var url: URL?
     var fileExtension: String
+    var mediatype: MediaType
     
-    init(displayName: String, filename: String, url: String) {
+    init(displayName: String, filename: String, url: String, mediatype: String) {
         self.displayName = displayName
         self.url = URL(string: url)
         self.fileExtension = url.fileExtension()
         self.filename = filename
+        self.mediatype = mediatype.enumCaseForMedia()
     }
 }

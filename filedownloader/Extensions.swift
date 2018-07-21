@@ -19,6 +19,13 @@ extension String {
         guard let ext = self.components(separatedBy: ".").last else { return "unknown" }
         return ext
     }
+    
+    func enumCaseForMedia() -> MediaType {
+        guard let mediaEnum = MediaType(rawValue: self) else {
+            return MediaType.unknown
+        }
+        return mediaEnum
+    }
 }
 
 extension URL {
