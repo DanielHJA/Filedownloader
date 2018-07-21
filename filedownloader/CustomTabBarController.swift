@@ -9,27 +9,35 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
+    
+    private lazy var downloadController: UIViewController = {
+        let temp = ViewController()
+        temp.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
+        return temp
+    }()
+    
+    private lazy var filesController: UIViewController = {
+        let temp = FilesViewController()
+        temp.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        return temp
+    }()
+    
+    override func loadView() {
+        super.loadView()
+        tabBar.barTintColor = UIColor.black
+        tabBar.tintColor = UIColor.orange
+        let tabs = [downloadController, filesController]
+        viewControllers = tabs.map { CustomNavigationController(rootViewController: $0) }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -33,7 +33,7 @@ class FileHandler {
             fileURL = directory.appendingPathComponent(fileName).appendingPathExtension(pathExtension)
         } else {
             do {
-                let files = try fileManager.contentsOfDirectory(atPath: directory.appendingPathComponent(mediatype.rawValue).path)
+                let files = try fileManager.contentsOfDirectory(atPath: directory.path)
                 let existing = files.filter { $0.components(separatedBy: "-").first! == fileName  }
                 fileURL = directory.appendingPathComponent("\(fileName)-\(existing.count + 1)").appendingPathExtension(pathExtension)
             } catch let error {

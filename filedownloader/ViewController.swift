@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         temp.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         temp.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         temp.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        temp.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        temp.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         return temp
     }()
     
