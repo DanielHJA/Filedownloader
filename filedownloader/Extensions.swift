@@ -20,11 +20,41 @@ extension String {
         return ext
     }
     
-    func enumCaseForMedia() -> MediaType {
-        guard let mediaEnum = MediaType(rawValue: self) else {
-            return MediaType.unknown
+    func enumCaseForMedia() -> Media {
+        guard let mediaEnum = Media(rawValue: self) else {
+            return Media.unknown
         }
         return mediaEnum
+    }
+}
+
+extension FileManager {
+    static func contentInDirectoryForMedia(_ media: Media, showPaths: Bool) -> [Any]? {
+        var url: URL!
+        var results: [Any] = []
+        guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+       
+        if media == .media {
+             url = directory.appendingPathComponent(media.rawValue)
+        } else {
+            url = directory.appendingPathComponent(Media.media.rawValue).appendingPathComponent(media.rawValue)
+        }
+        
+        if FileManager.default.fileExists(atPath: url.path) {
+            
+            do {
+                if showPaths {
+                    results = try FileManager.default.contentsOfDirectory(atPath: url.path)
+                } else {
+                    results = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: [])
+                }
+                return results
+                
+            } catch {
+                print(error)
+            }
+        }
+        return nil
     }
 }
 

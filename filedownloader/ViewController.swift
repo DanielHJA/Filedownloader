@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
-        title = "File Downloader"
+        title = "File Downloader"        
     }
 
     override func didReceiveMemoryWarning() {

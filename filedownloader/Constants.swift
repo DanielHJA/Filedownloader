@@ -8,20 +8,8 @@
 
 import UIKit
 
-enum MediaType: String {
-    case audio, video, image, unknown
-    func systemPath() -> String {
-        switch self {
-        case .audio:
-            return "audio"
-        case .video:
-            return "videos"
-        case .image:
-            return "images"
-        case .unknown:
-            return "unknown"
-        }
-    }
+enum Media: String {
+    case media, audio, video, image, unknown
 }
 
 enum DownloadState {

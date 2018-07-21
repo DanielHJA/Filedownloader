@@ -14,7 +14,7 @@ struct FileObject {
     var filename: String
     var url: URL?
     var fileExtension: String
-    var mediatype: MediaType
+    var mediatype: Media
     
     init(displayName: String, filename: String, url: String, mediatype: String) {
         self.displayName = displayName
